@@ -3,10 +3,10 @@ const axios = require("axios");
 const fs = require('fs');
 const path = require('path');
 const csvWriter = require('csv-writer').createObjectCsvWriter;
-// const asyncHandler = require("express-async-handler");
+
 
 //Login for Users
-const callLastFMApi = async (name) => { // take name
+const callLastFMApi = async (name) => {
   try {
     const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${name}&api_key=ada165e490f08a5fb48e6945c805519d&format=json`;
     const postData = {
@@ -21,8 +21,6 @@ const callLastFMApi = async (name) => { // take name
     res.status(500).send("Error calling external API");
   }
 };
-
-// GET & parse
 const getArtistInfo = asyncHandler(async (req, res) => {
   const { name } = req.body;
   try {
@@ -39,8 +37,8 @@ const getArtistInfo = asyncHandler(async (req, res) => {
         };
       });
 
-      // Write to CSV name.csv
-      const csvFilePath = path.join(__dirname,'..', 'public', `${name}.csv`); // public file in project
+      // Write to CSV
+      const csvFilePath = path.join(__dirname,'..', 'public', `${name}.csv`);
       const writer = csvWriter({
         path: csvFilePath,
         header: [
@@ -50,7 +48,6 @@ const getArtistInfo = asyncHandler(async (req, res) => {
           { id: 'image_small', title: 'image_small' },
         ],
       });
-
       await writer.writeRecords(parsedData);
       res.json({
         message: "successfully retrived data",
