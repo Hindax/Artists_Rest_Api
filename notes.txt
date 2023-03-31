@@ -1,0 +1,17 @@
+Error: Cannot find module 'express-async-handler'
+Require stack:
+
+
+require or import * to check
+postman: {
+    "name": "hind"
+}
+
+hind as test -- files will be saved to public with hind.csv
+
+PORT?
+
+nodejs udemy: Secrtion 26 & 22 and 13 (mongoose)
+
+
+TO: Check the connection, PORT?
