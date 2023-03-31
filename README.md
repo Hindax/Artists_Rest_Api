@@ -7,6 +7,13 @@ init express with root
 
 routes in artistRoutes
 
-change port 
+change port
+
+replace postman
+in Postamn: replace "test" with the artist name.
+
+{
+    "name": "hind"
+}
 
 

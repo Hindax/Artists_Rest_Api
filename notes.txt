@@ -9,9 +9,22 @@ postman: {
 
 hind as test -- files will be saved to public with hind.csv
 
-PORT?
-
+ref:
 nodejs udemy: Secrtion 26 & 22 and 13 (mongoose)
 
+errr port
 
 TO: Check the connection, PORT?
+server,js line 32
+
+backend: OK
+GET?
+POST for csv
+
+
+Error: Cannot find module 'dotenv'?
+ npm istall dotenv
+ npm i morgan
+ npm i cors
+
+ localhost 8000 HTTP ERROR 403?
